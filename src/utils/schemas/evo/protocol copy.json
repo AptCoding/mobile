@@ -1,0 +1,785 @@
+{
+  "title": "EVOBLEConfigurationProperties",
+  "minFirmwareVersion": "0.0.7",
+  "properties": [
+    {
+      "handle": "OCPP_URL",
+      "displayName": "Endpoint",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "readKey": "Get OCPP URL",
+      "writeKey": "Set OCPP URL"
+    },
+    {
+      "handle": "DEVICE_INFO",
+      "displayName": "Device Info",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Device information query",
+      "writeKey": null
+    },
+
+    {
+      "handle": "DEVICE_PASSWORD",
+      "displayName": "Device Password",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": null,
+      "writeKey": "Device password authentication"
+    },
+
+    {
+      "handle": "CHANGE_DEVICE_PASSWORD",
+      "displayName": "Change Device Password",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "w",
+        "installer": "w",
+        "manufacturer": "w"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": null,
+      "writeKey": "Device password modification"
+    },
+
+    {
+      "handle": "HEARTBEAT",
+      "displayName": "Heartbeat",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Device heartbeat test",
+      "writeKey": null
+    },
+
+    {
+      "handle": "POWER_TYPE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Get power type",
+      "writeKey": "Set power type"
+    },
+
+    {
+      "handle": "CURRENT",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set current parameter",
+      "readKey": "Get current parameters"
+    },
+
+    {
+      "handle": "FREE_CHARGING_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set FreeCharging mode",
+      "readKey": "Get FreeCharging mode"
+    },
+
+    {
+      "handle": "FREE_CHARGING_TAG",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set FreeCharging IdTag",
+      "readKey": "Get FreeCharging IdTag"
+    },
+
+    {
+      "handle": "NETWORK_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set network mode",
+      "readKey": "Get network mode"
+    },
+
+    {
+      "handle": "WIFI",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "systemKey": false,
+      "writeKey": "Set WIFI parameters",
+      "readKey": "Get WIFI parameters",
+      "inputs": [
+        {
+          "displayName": "WiFi SSID",
+          "responseDataKey": "SSID",
+          "colspan": 4,
+          "permissions": {
+            "user": "rw",
+            "installer": "rw",
+            "manufacturer": "rw"
+          },
+          "required": true
+        },
+        {
+          "displayName": "WiFi Password",
+          "responseDataKey": "Password",
+          "colspan": 4,
+          "permissions": {
+            "user": "rw",
+            "installer": "rw",
+            "manufacturer": "rw"
+          },
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "handle": "CHARGER_ID",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set OCPP ChargerID",
+      "readKey": "Get OCPP ChargerID"
+    },
+
+    {
+      "handle": "HTTP_BASIC_AUTH_USERNAME",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set HTTP Basic Authentication account",
+      "readKey": "Get HTTP Basic Authentication account"
+    },
+
+    {
+      "handle": "HTTP_BASIC_AUTH_PASSWORD",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set HTTP Basic Authentication password",
+      "readKey": "Get HTTP Basic Authentication password"
+    },
+
+    {
+      "handle": "RANDOM_DELAY",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set random delay time",
+      "readKey": "Get random delay time"
+    },
+
+    {
+      "handle": "OFF_PEAK_SCHEDULE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set off-peak schedule",
+      "readKey": "Get off-peak schedule"
+    },
+
+    {
+      "handle": "LOAD_BALANCING_COMM_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set dynamic load balancing communication mode",
+      "readKey": "Get dynamic load balancing communication mode"
+    },
+
+    {
+      "handle": "LOAD_BALANCING_MIN_CURRENT",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set dynamic load balancing minimum current",
+      "readKey": "Get dynamic load balancing minimum current"
+    },
+
+    {
+      "handle": "LOAD_BALANCING_PHASE_SWITCHING",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set dynamic load balancing phase switching",
+      "readKey": "Get dynamic load balancing phase switching"
+    },
+
+    {
+      "handle": "LOAD_BALANCING_WORKING_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set dynamic load balancing working mode",
+      "readKey": "Get dynamic load balancing working mode"
+    },
+
+    {
+      "handle": "LOCK_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set charger lock mode",
+      "readKey": "Get charger lock mode"
+    },
+
+    {
+      "handle": "ADMIN_CARD",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set administrator card",
+      "readKey": "Get administrator card"
+    },
+
+    {
+      "handle": "INSTALL_STATUS",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set device installation status",
+      "readKey": "Get device installation status"
+    },
+
+    {
+      "handle": "OFFLINE_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set offline mode status",
+      "readKey": "Get offline mode status"
+    },
+
+    {
+      "handle": "GPRS_MODE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false,
+      "writeKey": "Set GPRS mode status",
+      "readKey": "Get GPRS parameters"
+    },
+
+    {
+      "handle": "REBOOT",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "writeKey": "System reboot",
+      "readKey": null
+    },
+    {
+      "handle": "FACTORY_RESET",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "writeKey": "Factory reset",
+      "readKey": null
+    },
+    {
+      "handle": "WIFI_HOTSPOT_SEARCH",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "WIFI hotspot search",
+      "writeKey": null
+    },
+    {
+      "handle": "LOCK_STATUS",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Charger lock status",
+      "writeKey": null
+    },
+    {
+      "handle": "LOCK_CONTROL",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "writeKey": "Charger lock control",
+      "readKey": null
+    },
+    {
+      "handle": "CONN_STATUS",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "OCPP connection status",
+      "writeKey": null
+    },
+    {
+      "handle": "NETWORK_DEVICE_STATUS",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Network device status",
+      "writeKey": null
+    },
+    {
+      "handle": "DYNAMIC_LOAD_BALANCING_DATA",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Dynamic load balancing data",
+      "writeKey": null
+    },
+    {
+      "handle": "CHARGING_START_STOP",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "writeKey": "Start and stop charging",
+      "readKey": null
+    },
+    {
+      "handle": "CHARGING_DATA",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Charging data query",
+      "writeKey": null
+    },
+    {
+      "handle": "CHARGING_RECORD",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "Charging record query",
+      "writeKey": null
+    },
+    {
+      "handle": "SIM_INFO",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "readKey": "SIM information query",
+      "writeKey": null
+    },
+    {
+      "handle": "FIRMWARE_UPGRADE",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "writeKey": "Firmware upgrade",
+      "readKey": null
+    },
+    {
+      "handle": "FIRMWARE_BLOCK_REQUEST",
+      "displayName": "",
+      "group": "Back Office",
+      "tab": "Back Office",
+      "colspan": 4,
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": true,
+      "writeKey": "Firmware block request",
+      "readKey": null
+    }
+  ]
+}

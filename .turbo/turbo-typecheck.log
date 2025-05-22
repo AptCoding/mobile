@@ -1,0 +1,5 @@
+
+
+> @connect/mobile@0.1.0 typecheck /home/uday/DEV/ECA-CONNECT/connect/apps/mobile
+> tsc --noEmit
+

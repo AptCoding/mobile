@@ -1,0 +1,662 @@
+{
+  "title": "BLEConfigurationProperties",
+  "minFirmwareVersion": "0.0.1",
+  "properties": {
+    "UID": {
+      "characteristicId": "0000a000-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 24,
+      "rebootRequired": true,
+      "systemKey": true
+    },
+    "Password": {
+      "characteristicId": "0000a001-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "w",
+        "installer": "w",
+        "manufacturer": "w"
+      },
+      "required": true,
+      "maxLength": 24,
+      "rebootRequired": true,
+      "systemKey": true
+    },
+    "ChargePointID": {
+      "characteristicId": "0000a002-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 24,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "SerialNumber": {
+      "characteristicId": "0000a003-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "maxLength": 24,
+      "systemKey": false
+    },
+    "FirmwareVersionIOCU": {
+      "characteristicId": "0000a004-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "maxLength": 8,
+      "systemKey": false
+    },
+    "FirmwareVersionMCU": {
+      "characteristicId": "0000a005-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "maxLength": 8,
+      "systemKey": false
+    },
+    "Model": {
+      "characteristicId": "0000a006-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "rw"
+      },
+      "maxLength": 16,
+      "systemKey": false
+    },
+    "MainFuse": {
+      "characteristicId": "0000a007-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": 60,
+      "required": true,
+      "minValue": 60,
+      "maxValue": 255,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "PhaseRotation": {
+      "characteristicId": "0000a008-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "manufacturer": "rw"
+      },
+      "default": "L1",
+      "required": true,
+      "maxLength": 8,
+      "options": ["L1", "L2", "L3"],
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "L1Active": {
+      "characteristicId": "0000a009-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "L2Active": {
+      "characteristicId": "0000a00a-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "L3Active": {
+      "characteristicId": "0000a00b-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "ChargePointCurrentLimit": {
+      "characteristicId": "0000a00c-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "user": "r",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "minValue": 0,
+      "maxValue": 80,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "MaxCurrentConnection": {
+      "characteristicId": "0000a00d-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "minValue": 0,
+      "maxValue": 32,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "SolarCT": {
+      "characteristicId": "0000a00f-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "rw"
+      },
+      "default": true,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "NumberOfConnectors": {
+      "characteristicId": "0000a010-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": 1,
+      "required": true,
+      "options": [0, 1, 2, 3, 4],
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "LockConnector": {
+      "characteristicId": "0000a011-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "rw",
+        "manufacturer": "rw"
+      },
+      "default": false,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "RFIDReader1Enabled": {
+      "characteristicId": "0000a012-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": true,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "OfflineMode": {
+      "characteristicId": "0000a013-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": false,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "UnlockConnectorOnEVSideDisconnect": {
+      "characteristicId": "0000a014-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": true,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "UTCDateAndTime": {
+      "characteristicId": "0000a015-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 24,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "NetworkInterface": {
+      "characteristicId": "0000a016-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "options": [
+        "GSM_COMM_INTERFACE",
+        "WIFI_COMM_INTERFACE",
+        "ETH_COMM_INTERFACE"
+      ],
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "BESURL": {
+      "characteristicId": "0000a017-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 255,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "WifiSSID": {
+      "characteristicId": "0000a019-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["WIFI_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "WifiPassKey": {
+      "characteristicId": "0000a01a-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "w",
+        "installer": "w",
+        "manufacturer": "w"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["WIFI_COMM_INTERFACE"]
+        }
+      ],
+      "minLength": 4,
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "MACAddress": {
+      "characteristicId": "0000a01b-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["ETH_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "EthernetDHCP": {
+      "characteristicId": "0000a01c-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["ETH_COMM_INTERFACE"]
+        }
+      ],
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "EthernetAddress": {
+      "characteristicId": "0000a01d-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["ETH_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "EthernetNetmask": {
+      "characteristicId": "0000a01e-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["ETH_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "EthernetGateway": {
+      "characteristicId": "0000a01f-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["ETH_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "EthernetDNS1": {
+      "characteristicId": "0000a020-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["ETH_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "GPRSAPN": {
+      "characteristicId": "0000a021-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["GSM_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "GPRSPassword": {
+      "characteristicId": "0000a022-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["GSM_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "GPRSUser": {
+      "characteristicId": "0000a023-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["GSM_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 16,
+      "rebootRequired": true,
+      "systemKey": false
+    },
+    "ModemICCID": {
+      "characteristicId": "0000a024-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["GSM_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 24,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "ModemIMSI": {
+      "characteristicId": "0000a025-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": false,
+      "availableWhen": [
+        {
+          "property": "NetworkInterface",
+          "oneOf": ["GSM_COMM_INTERFACE"]
+        }
+      ],
+      "maxLength": 24,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "LEDActive": {
+      "characteristicId": "0000a02a-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": true,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "LEDIntensityDefault": {
+      "characteristicId": "0000a02d-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "user": "rw",
+        "manufacturer": "rw"
+      },
+      "default": 5,
+      "required": true,
+      "options": [1, 2, 3, 4, 5],
+      "rebootRequired": false,
+      "systemKey": false
+    },
+    "MeterValue": {
+      "characteristicId": "0000a02e-0000-1000-8000-00805f9b34fb",
+      "type": "u32le",
+      "permissions": {
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "default": 0,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "CommissionStatus": {
+      "characteristicId": "0000a02f-0000-1000-8000-00805f9b34fb",
+      "type": "boolean",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "default": false,
+      "required": true,
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "ErrorCode": {
+      "characteristicId": "0000a030-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": true,
+      "maxLength": 16,
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "ModemCSQ": {
+      "characteristicId": "0000a031-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "user": "r",
+        "installer": "r",
+        "manufacturer": "r"
+      },
+      "required": true,
+      "minValue": 0,
+      "maxValue": 99,
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "StartChargeOnSocket": {
+      "characteristicId": "0000a032-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "options": [0, 1, 2, 3, 4],
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "SaveConfig": {
+      "characteristicId": "0000b000-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "user": "w",
+        "installer": "w",
+        "manufacturer": "w"
+      },
+      "default": 17,
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "SystemRestart": {
+      "characteristicId": "0000b001-0000-1000-8000-00805f9b34fb",
+      "type": "u8",
+      "permissions": {
+        "user": "w",
+        "installer": "w",
+        "manufacturer": "w"
+      },
+      "default": 17,
+      "rebootRequired": false,
+      "systemKey": true
+    },
+    "ChangePassword": {
+      "characteristicId": "0000b002-0000-1000-8000-00805f9b34fb",
+      "type": "string",
+      "permissions": {
+        "user": "rw",
+        "installer": "rw",
+        "manufacturer": "rw"
+      },
+      "required": true,
+      "maxLength": 24,
+      "rebootRequired": true,
+      "systemKey": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+
+
+> @connect/mobile@0.1.0 lint /home/uday/DEV/ECA-CONNECT/connect/apps/mobile
+> eslint --cache --cache-location .cache/.eslintcache
+
+[0m[0m
+[0m[4m/home/uday/DEV/ECA-CONNECT/connect/apps/mobile/src/app/_components/molecules/connector-flashing.tsx[24m[0m
+[0m  [2m33:6[22m  [33mwarning[39m  React Hook useEffect has a missing dependency: 'opacity'. Either include it or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m[0m
+[0m[4m/home/uday/DEV/ECA-CONNECT/connect/apps/mobile/src/app/_components/organisms/bluetooth/ble-configuration-form.tsx[24m[0m
+[0m  [2m146:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'getValues' and 'setValue'. Either include them or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m[0m
+[0m[4m/home/uday/DEV/ECA-CONNECT/connect/apps/mobile/src/app/_components/organisms/bluetooth/ble-connection-provider.tsx[24m[0m
+[0m  [2m187:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'BLEControlledConnect', 'connected', and 'deviceName'. Either include them or remove the dependency array                             [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m223:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'allDevices', 'connectedDevice', 'deviceHandler', 'deviceName', and 'disconnect'. Either include them or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m257:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'connected' and 'validateV1Authenticaion'. Either include them or remove the dependency array                                         [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m268:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'fetchConfig' and 'hasFetchedConfig'. Either include them or remove the dependency array                                              [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m274:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'numberOfExpectedKeys' and 'setInitialConfig'. Either include them or remove the dependency array                                     [2mreact-hooks/exhaustive-deps[22m[0m
+[0m[0m
+[0m[4m/home/uday/DEV/ECA-CONNECT/connect/apps/mobile/src/app/_components/organisms/bluetooth/ble-connector.tsx[24m[0m
+[0m  [2m74:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'authenticate', 'authenticated', 'deviceHandler?.protocol', and 'pin'. Either include them or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m86:6[22m  [33mwarning[39m  React Hook useEffect has a missing dependency: 'protocol'. Either include it or remove the dependency array                                                               [2mreact-hooks/exhaustive-deps[22m[0m
+[0m[0m
+[0m[4m/home/uday/DEV/ECA-CONNECT/connect/apps/mobile/src/app/_components/organisms/bluetooth/ble-test-v1.tsx[24m[0m
+[0m  [2m64:6[22m  [33mwarning[39m  React Hook useEffect has missing dependencies: 'collectResults' and 'getNumberOfConnectors'. Either include them or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m[0m
+[0m[4m/home/uday/DEV/ECA-CONNECT/connect/apps/mobile/src/app/_layout.tsx[24m[0m
+[0m  [2m47:6[22m  [33mwarning[39m  React Hook useEffect has a missing dependency: 'isAppInitialized'. Either include it or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m[0m
+[0m[33m[1m✖ 11 problems (0 errors, 11 warnings)[22m[39m[0m
+[0m[33m[1m[22m[39m[0m

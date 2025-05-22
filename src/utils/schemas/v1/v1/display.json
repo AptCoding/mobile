@@ -1,0 +1,207 @@
+{
+  "ChargePointID": {
+    "displayName": "Charge Point ID",
+    "width": 3,
+    "group": "General",
+    "excludePreset": true
+  },
+  "SerialNumber": {
+    "displayName": "Serial No",
+    "group": "General"
+  },
+  "Model": {
+    "displayName": "Model",
+    "group": "General"
+  },
+  "FirmwareVersionIOCU": {
+    "displayName": "IOCU Version",
+    "group": "General"
+  },
+  "FirmwareVersionMCU": {
+    "displayName": "MCU Version",
+    "group": "General"
+  },
+  "MainFuse": {
+    "displayName": "Main Fuse",
+    "width": 2,
+    "group": "General",
+    "infoText": "This value is only applicable should a CT clamp be connected for dynamic load balancing purposes on single phase installations."
+  },
+  "NumberOfConnectors": {
+    "displayName": "No of Connectors",
+    "width": 2,
+    "group": "General"
+  },
+  "RFIDReader1Enabled": {
+    "displayName": "RFID Reader Enabled",
+    "width": 2,
+    "group": "General",
+    "infoText": "If your client wishes to disable the RFID reader, set this field to 'false'."
+  },
+
+  "ChargePointCurrentLimit": {
+    "displayName": "Charge Point Limit",
+    "width": 2,
+    "group": "Current",
+    "infoText": "This value should not exceed the rating of the overcurrent protective device / incoming cable to the chargepoint. If the chargepoint has multiple sockets, this value will be shared between them."
+  },
+  "MaxCurrentConnection": {
+    "displayName": "Max Socket Limit",
+    "width": 2,
+    "group": "Current",
+    "infoText": "This is the maximum charge rate per socket."
+  },
+  "MinCurrentConnection": {
+    "displayName": "Min",
+    "width": 2,
+    "group": "Current"
+  },
+
+  "BESURL": {
+    "displayName": "Endpoint",
+    "group": "Back Office",
+    "width": 3,
+    "customComponent": "BACKOFFICE"
+  },
+  "BESPortNumber": {
+    "displayName": "Port Number",
+    "group": "Back Office",
+    "width": 1
+  },
+
+  "PhaseRotation": {
+    "displayName": "Phase Rotation",
+    "group": "Phase",
+    "infoText": "Please select the electrical phase this chargepoint is being fed from."
+  },
+  "L1Active": {
+    "displayName": "L1 Active",
+    "group": "Phase"
+  },
+  "L2Active": {
+    "displayName": "L2 Active",
+    "group": "Phase"
+  },
+  "L3Active": {
+    "displayName": "L3 Active",
+    "group": "Phase"
+  },
+
+  "NetworkInterface": {
+    "displayName": "Network Interface",
+    "group": "Connectivity",
+    "width": 3,
+    "infoText": "Please ensure your chosen method of connectivity is tested and has sufficient strength prior to selection."
+  },
+  "WifiSSID": {
+    "displayName": "Wifi SSID",
+    "group": "Connectivity",
+    "infoText": "Enter the SSID for the Wifi network you are connecting to."
+  },
+  "WifiPassKey": {
+    "displayName": "Wifi Password",
+    "group": "Connectivity",
+    "infoText": "Enter the password for the Wifi network you are connecting to."
+  },
+  "EthernetDHCP": {
+    "displayName": "Ethernet DHCP",
+    "group": "Connectivity"
+  },
+  "EthernetAddress": {
+    "displayName": "Static IP",
+    "group": "Connectivity"
+  },
+  "EthernetNetmask": {
+    "displayName": "Network Mask",
+    "group": "Connectivity"
+  },
+  "EthernetGateway": {
+    "displayName": "Network Gateway",
+    "group": "Connectivity"
+  },
+  "EthernetDNS1": {
+    "displayName": "DNS Server",
+    "group": "Connectivity"
+  },
+  "MACAddress": {
+    "displayName": "MAC Address",
+    "group": "Connectivity",
+    "width": 3,
+    "excludePreset": true,
+    "infoText": "Enter the MAC address for the ethernet network you are connecting to."
+  },
+  "GPRSAPN": {
+    "displayName": "GPRS APN",
+    "group": "Connectivity",
+    "infoText": "All units have a pre-installed sim card and the APN is pre-configured by Rolec EV. You / your client will need to make contact with Rolec EV to pay and activate the data connection. If an alternative sim card is to be utilised, please enter the relevant APN."
+  },
+  "GPRSPassword": {
+    "displayName": "GPRS Password",
+    "group": "Connectivity",
+    "infoText": "Do not amend unless instructed to do so by an alternative sim card provider."
+  },
+  "GPRSUser": {
+    "displayName": "GPRS Username",
+    "group": "Connectivity"
+  },
+
+  "BuzzerActive": {
+    "displayName": "Buzzer Active",
+    "group": "Buzzer"
+  },
+  "BuzzerInterval": {
+    "displayName": "Buzzer Interval",
+    "group": "Buzzer"
+  },
+  "BuzzerPeriod": {
+    "displayName": "Buzzer Period",
+    "group": "Buzzer"
+  },
+
+  "LEDActive": {
+    "displayName": "LED Active",
+    "group": "LED",
+    "infoText": "If your client wishes to disable the LED status indicator(s), set value to 'false'."
+  },
+  "BlinkingInterval": {
+    "displayName": "LED Blinking Interval",
+    "group": "LED"
+  },
+  "LEDIntensityLow": {
+    "displayName": "LED Intensity Low",
+    "group": "LED"
+  },
+  "LEDIntensityHigh": {
+    "displayName": "LED Intensity High",
+    "group": "LED"
+  },
+  "LEDIntensityDefault": {
+    "displayName": "LED Intensity Default",
+    "group": "LED"
+  },
+
+  "SolarCT": {
+    "displayName": "Solar CT",
+    "group": "Other"
+  },
+  "LockConnector": {
+    "displayName": "Lock Connectors",
+    "group": "Other"
+  },
+  "OfflineMode": {
+    "displayName": "Offline Mode",
+    "group": "Other",
+    "infoText": "When set to 'true', in the event of a loss of connectivity to a network the chargepoint will operate on a plug and charge basis. "
+  },
+  "UTCDateAndTime": {
+    "displayName": "UTC Date and Time",
+    "group": "Other",
+    "customComponent": "UTCDATE"
+  },
+  "UnlockConnectorOnEVSideDisconnect": {
+    "displayName": "Unlock Connector on EV Disconnect",
+    "group": "Other",
+    "width": 3,
+    "infoText": "If your client wishes to lock the charging cable into the charging socket in-between charging sessions, set the value to 'false'. The cable must be unplugged on a regular basis, allowing the connectors to be checked for damage or contamination."
+  }
+}
